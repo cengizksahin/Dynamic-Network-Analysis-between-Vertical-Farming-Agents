@@ -1,0 +1,24 @@
+symbol,parameter_name,value,unit,epistemological_tier,source_justification
+L,torus_grid_dimension,10,nodes_per_side,Methodological Design,Section 3.1 (N = L*L = 100 agents; z = 4)
+T,time_horizon,100,rounds,Methodological Design,Section 3.5.2 (100 discrete harvest cycles)
+S_max,monte_carlo_seeds,100,seeds,Methodological Design,Section 4.2.1 (100 independent realizations)
+p_C0,initial_cooperator_prob,0.50,probability,Methodological Design,Section 3.5.5 (50% C / 50% D at t=0)
+p_TypeA,type_a_phenotype_prob,0.50,probability,Methodological Design,Section 3.5.5 (50% Type A / 50% Type B)
+d,plant_density,24.0,plants_per_m2,Tier 1: Empirical,Barbosa et al. (2015 p. 6882)
+l,vertical_layers,5.0,layers,Tier 1: Empirical,Touliatos et al. (2016) (5-layer columns)
+eta_min,efficiency_min,0.50,ratio,Tier 1: Empirical,Section 2.1 uniform lower bound
+eta_max,efficiency_max,1.00,ratio,Tier 1: Empirical,Section 2.1 uniform upper bound (mean 0.75)
+v,crop_market_value,2.50,EUR_per_head,Tier 1: Empirical,CEA benchmark (mean H_i = 225.00 EUR)
+unit_water_cost,theta_w_P_w,0.012,EUR_per_plant,Tier 1: Empirical,Barbosa et al. (2015 p. 6885; 20 L/kg)
+unit_elec_cost,theta_e_P_e,0.904,EUR_per_plant,Tier 1: Empirical,Barbosa et al. (2015; 25 kWh/kg); Xydis et al. (2017)
+unit_nutr_cost,theta_n_P_n,0.184,EUR_per_plant,Tier 1: Empirical,Benke & Tomkins (2017) (total c_i = 132.00 EUR)
+lambda_L,loss_aversion_coeff,2.25,multiplier,Tier 1: Empirical,Tversky & Kahneman (1992); Liu & Liu (2022)
+W_h,hourly_opportunity_wage,15.00,EUR_per_hour,Tier 1: Empirical,Appendix (Cost of Cooperation Effort)
+p_rewire,rewiring_probability,0.30,probability,Tier 1: Empirical,Rand et al. (2011) fluid network benchmark
+t_coop,coordination_time,1.00,hours_per_cycle,Tier 2: Domain Prior,Section 2.4 (k = t_coop * W_h = 15.00 EUR)
+alpha,agricultural_synergy,0.15,ratio,Tier 2: Domain Prior,Wang et al. (2022); Luo et al. (2023)
+K,fermi_noise_temperature,5.00,EUR_scale,Tier 2: Domain Prior,Scaled from Szolnoki et al. (2009) (beta = 0.20)
+p_base,base_point_reward,5.00,points,Tier 3: Mechanism Design,Calibrated so q*(1) = 0.739 in (0.50 0.75]
+b,max_newbie_bonus,10.50,points,Tier 3: Mechanism Design,Front-loads onboarding reputation (Table 3)
+gamma,streak_sensitivity_rate,0.25,rate,Tier 3: Mechanism Design,Calibrated so q*(5) = 0.619 < q*(1)
+w,currency_exchange_rate,1.00,EUR_per_point,Tier 3: Mechanism Design,Toggles incentives (w=0 in T0/T1; w=1 in T2/T3)
