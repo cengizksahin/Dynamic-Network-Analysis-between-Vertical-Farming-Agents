@@ -1,0 +1,6 @@
+# For Windows Python 3.13, use recent compatible builds.
+numpy>=2.0
+pandas>=2.2.3
+matplotlib>=3.9
+scipy>=1.14
+statsmodels>=0.14.4
